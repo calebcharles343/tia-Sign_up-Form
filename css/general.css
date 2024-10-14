@@ -1,0 +1,143 @@
+/* 
+01 Typography System
+
+
+Font sizes (px)
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 /
+
+- Font weight:
+Default: 400, 
+Medium:500, 
+Semi-bold:600, 
+Bold: 700,
+Large: 900.
+
+- Line height:
+Default: 1
+Small: 1.05
+medium: 1.2
+large: 1.8
+Paragraph default: 1.6
+
+ letter-spacing
+ -0.5px
+ - 0.75px;
+
+02 COLORS
+-Primary: #1F2937
+-Secondary: #F9FAF8, #E5E7EB, #3882F6
+-shades: #E5E7EB
+#45260a
+
+-accents:
+-greys: #555; #333;
+
+03 SHADOWS
+box-shadow:
+ 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+04 BORDER RADIOUS 
+default: 9px
+medium: 12px
+
+05 WHITESPACE
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+
+*/
+
+/* /////////////////////// */
+/* GLOBAL RESET */
+/* /////////////////////// */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625*100 = 62.5
+  percentage of user's browser font-size settings */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /*does not work on safari and micro edge  */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+  /* Only works if ther is nothing 
+  absolutely positioned in relations to body  */
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* /////////////////////// */
+/* layout */
+/* /////////////////////// */
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3.5fr 6.5fr;
+  grid-template-rows: 3.5fr 3fr 3.5fr;
+}
+
+.aside {
+  grid-row: 1 / 4;
+  grid-column: 1 / 2;
+}
+
+.text {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.form-container {
+  grid-row: 2 / 3;
+  grid-column: 2/ 3;
+}
+
+.form__button-container {
+  grid-row: 3/ 4;
+  grid-column: 2/ 3;
+}
+
+/* /////////////////////// */
+/* GANERAL CSS */
+/* /////////////////////// */
+p,
+a {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.btn-link:link,
+.btn-link:visited {
+  display: inline-block;
+  padding: 1rem 4rem;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.btn-link:hover,
+.btn-link:active {
+  transform: scale(1.05);
+}

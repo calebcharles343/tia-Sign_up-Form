@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Odin Login Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/query.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="/index.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <aside class="aside">
+        <!-- <img
+          src="/img/green-leaf.jpg"
+          alt="green leaves image"
+          class="aside-img"
+        /> -->
+
+        <div class="logo">
+          <img
+            class="logo-img"
+            src="/img/odin-lined.png"
+            alt="odin-lined logo"
+          />
+          <span>ODIN</span>
+        </div>
+
+        <p>Photo by Halie West on Unsplash</p>
+      </aside>
+
+      <div class="text">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up now
+          to get started.
+        </p>
+
+        <p>You know you want to.</p>
+      </div>
+      <section class="form-container">
+        <form id="signUp_form">
+          <fieldset class="form-field">
+            <legend>Let's do this!</legend>
+            <div class="form-row">
+              <div class="form-item">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  class="form-input"
+                  placeholder="Enter your first name"
+                  autocomplete="given-name"
+                  required
+                />
+              </div>
+              <div class="form-item">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  class="form-input"
+                  placeholder="Enter your last name"
+                  autocomplete="family-name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-item">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-input"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="form-item">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  class="form-input"
+                  placeholder="Enter your phone number"
+                  pattern="[0-9]{10}"
+                  title="Please enter a valid phone number (10 digits)"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-item">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-input"
+                  placeholder="Enter your password"
+                  autocomplete="new-password"
+                  required
+                />
+              </div>
+              <div class="form-item">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  class="form-input"
+                  placeholder="Confirm your password"
+                  autocomplete="new-password"
+                  required
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              style="display: none"
+              id="hiddenSubmitButton"
+            ></button>
+          </fieldset>
+        </form>
+      </section>
+
+      <div class="form__button-container">
+        <button id="submitFormBtn" class="submit-button">Create Account</button>
+
+        <p>Already have an Account? <a href="#">Log in</a></p>
+      </div>
+    </div>
+  </body>
+</html>
