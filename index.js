@@ -1,5 +1,13 @@
-const submitButton = document.getElementById("submitFormBtn");
 const signUp_form = document.getElementById("signUp_form");
+const formGroups = document.querySelectorAll(".form-group");
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("confirmPassword");
+const submitButton = document.getElementById("submitFormBtn");
+
 submitButton.addEventListener("click", function (e) {
   // e.preventDefault();
 
@@ -8,8 +16,6 @@ submitButton.addEventListener("click", function (e) {
   for (const [name, value] of formData.entries()) {
     console.log(`${name}: ${value}`);
   }
-
-  // signUp_form.submit();
 });
 /*///////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////*/
@@ -20,7 +26,6 @@ signUp_form.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent form submission
 
   // Clear previous errors
-  const formGroups = document.querySelectorAll(".form-group");
   formGroups.forEach((group) => {
     group.classList.remove("error");
     group.querySelector(".error-message").textContent = "";
@@ -32,21 +37,19 @@ signUp_form.addEventListener("submit", function (event) {
   let isValid = true;
 
   // First Name validation
-  const firstName = document.getElementById("firstName");
+
   if (firstName.value.trim() === "") {
     isValid = false;
     displayError("firstNameGroup", "First Name is required.");
   }
 
   // Last Name validation
-  const lastName = document.getElementById("lastName");
   if (lastName.value.trim() === "") {
     isValid = false;
     displayError("lastNameGroup", "Last Name is required.");
   }
 
   // Email validation
-  const email = document.getElementById("email");
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (!emailPattern.test(email.value)) {
     isValid = false;
@@ -54,7 +57,6 @@ signUp_form.addEventListener("submit", function (event) {
   }
 
   // Phone Number validation
-  const phone = document.getElementById("phone");
   const phonePattern = /^[0-9]{10}$/; // Assuming 10 digits for a valid phone number
   if (!phonePattern.test(phone.value)) {
     isValid = false;
@@ -62,7 +64,6 @@ signUp_form.addEventListener("submit", function (event) {
   }
 
   // Password validation
-  const password = document.getElementById("password");
   if (password.value.length < 6) {
     isValid = false;
     displayError(
@@ -72,7 +73,6 @@ signUp_form.addEventListener("submit", function (event) {
   }
 
   // Confirm Password validation
-  const confirmPassword = document.getElementById("confirmPassword");
   if (confirmPassword.value !== password.value) {
     isValid = false;
     displayError("confirmPasswordGroup", "Passwords do not match.");
