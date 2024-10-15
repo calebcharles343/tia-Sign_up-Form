@@ -87,7 +87,7 @@
   gap: 8rem;
 }
 
-.form-item {
+.form-group {
   display: flex;
   flex-direction: column;
 }
@@ -109,7 +109,7 @@
 /* .form-input:invalid {
   border: 2px solid #ff3860;
 } */
-.form-item > label {
+.form-group > label {
   font-size: 1.4rem;
   font-weight: 500;
   padding-bottom: 0.5rem;
