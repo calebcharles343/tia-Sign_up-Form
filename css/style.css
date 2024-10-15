@@ -79,8 +79,8 @@
   margin-bottom: 2rem;
 }
 
-#signUp-form {
-}
+/* #signUp-form {
+} */
 
 .form-row {
   display: flex;
@@ -94,17 +94,31 @@
 
 .form-input {
   display: flex;
-  border: 1px solid #ced4da;
+  border: 1px solid #e5e7eb;
   text-align: justify;
   width: 30rem;
   height: 4rem;
   padding: 6px 12px;
 }
 
+.form-input:focus {
+  /* border: 2px solid #007bff;  */
+  outline: none; /* Removes default focus outline */
+  /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+}
+/* .form-input:invalid {
+  border: 2px solid #ff3860;
+} */
 .form-item > label {
   font-size: 1.4rem;
   font-weight: 500;
   padding-bottom: 0.5rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 /* /////////////////////// */
