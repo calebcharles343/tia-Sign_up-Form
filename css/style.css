@@ -42,13 +42,25 @@
 }
 
 /* /////////////////////// */
-/* Text */
+/* Form */
 /* /////////////////////// */
+
+.form-container {
+  background-color: #f8f9fa;
+}
+
+#signUp_form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text */
 .text {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: #f8f9fa;
+
   padding: 6rem 4rem 5rem 4rem;
 }
 .text > p {
@@ -57,30 +69,24 @@
   font-weight: 500;
 }
 
-/* /////////////////////// */
-/* Form */
-/* /////////////////////// */
-.form-container {
-  padding: 4rem;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
+/* form-fieldset */
 .form-field {
+  background-color: #fff;
+  flex: 1;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   border: none;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+  z-index: 8888;
 }
 
-.form-field > legend {
+.form-field > span {
   font-size: 2.4rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  padding-top: 2rem;
 }
-
-/* #signUp-form {
-} */
 
 .form-row {
   display: flex;
@@ -98,7 +104,7 @@
   text-align: justify;
   width: 30rem;
   height: 4rem;
-  padding: 6px 12px;
+  padding: 0.6rem 1.2rem;
 }
 
 .form-input:focus {
@@ -106,9 +112,7 @@
   outline: none; /* Removes default focus outline */
   /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
 }
-/* .form-input:invalid {
-  border: 2px solid #ff3860;
-} */
+
 .form-group > label {
   font-size: 1.4rem;
   letter-spacing: 2px;
@@ -122,12 +126,11 @@
   margin-top: 5px;
 }
 
-/* /////////////////////// */
 /* Form Botton Container */
-/* /////////////////////// */
 
 .form__button-container {
-  background-color: #f8f9fa;
+  flex: 1;
+
   padding: 4rem;
 }
 

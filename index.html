@@ -40,19 +40,19 @@
         <p>Photo by Halie West on Unsplash</p>
       </aside>
 
-      <div class="text">
-        <p>
-          This is not a real online service! You know you need something like
-          this in your life to help you realize your deepest dreams. Sign up now
-          to get started.
-        </p>
-
-        <p>You <em>know</em> you want to.</p>
-      </div>
       <section class="form-container">
         <form id="signUp_form" action="/">
+          <div class="text">
+            <p>
+              This is not a real online service! You know you need something
+              like this in your life to help you realize your deepest dreams.
+              Sign up now to get started.
+            </p>
+
+            <p>You <em>know</em> you want to.</p>
+          </div>
           <fieldset class="form-field">
-            <legend>Let's do this!</legend>
+            <span>Let's do this!</span>
             <div class="form-row">
               <div class="form-group" id="firstNameGroup">
                 <label for="firstName">First Name</label>
@@ -141,21 +141,16 @@
                 <span class="error-message"></span>
               </div>
             </div>
-
-            <button
-              type="submit"
-              id="hiddenSubmitButton"
-              style="display: none"
-            ></button>
           </fieldset>
+          <div class="form__button-container">
+            <button id="submitFormBtn" class="submit-button">
+              Create Account
+            </button>
+
+            <p>Already have an Account? <a href="#" class="link">Log in</a></p>
+          </div>
         </form>
       </section>
-
-      <div class="form__button-container">
-        <button id="submitFormBtn" class="submit-button">Create Account</button>
-
-        <p>Already have an Account? <a href="#" class="link">Log in</a></p>
-      </div>
     </div>
   </body>
 </html>
