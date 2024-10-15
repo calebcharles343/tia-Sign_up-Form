@@ -23,6 +23,7 @@
 .logo {
   display: flex;
   align-items: center;
+  padding: 1rem;
   justify-content: center;
   font-family: "Norse-Bold", sans-serif;
   font-size: 9.8rem;
