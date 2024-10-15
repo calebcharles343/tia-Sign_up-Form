@@ -65,7 +65,7 @@
 }
 .text > p {
   color: #111;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
@@ -73,7 +73,7 @@
 .form-field {
   background-color: #fff;
   flex: 1;
-  padding: 4rem;
+  padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -107,9 +107,9 @@
 }
 
 .form-input:focus {
-  /* border: 2px solid #007bff;  */
-  outline: none; /* Removes default focus outline */
-  /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+  border: 2px solid #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .form-group > label {
