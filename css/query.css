@@ -1,5 +1,21 @@
 @media (max-width: 34em) {
-  /* html {
-    font-size: 50.5%;
-  } */
+  html {
+    font-size: 40%;
+  }
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .aside {
+    height: 20rem;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
